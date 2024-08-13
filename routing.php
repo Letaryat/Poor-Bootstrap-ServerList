@@ -23,12 +23,10 @@ if($match) {
             call_user_func_array($match["target"], $match["params"]); 
         }else{
             require BaseDIR.$match["target"]; 
-            //require $_SERVER['DOCUMENT_ROOT'].$match["target"]; 
         }
     }
 } else {
-    //echo "Jeblo kurwa" . __DIR__;
-    require('app/views/errors/404.php');
+    require('app/views/404.php');
     
 
 }
