@@ -26,7 +26,13 @@
 
         </div>
         <div class="col-md-4">
-        <img class=" mb-2" style="max-width:100%; border-radius:10px;" src="https://rank.pierdolnik.eu/storage/cache/img/maps/730/am_water_j_spin.jpg">
+        <img class=" mb-2" style="max-width:100%; border-radius:10px;" src="<?php 
+	if(@getimagesize($mapimage)){
+		echo $mapimage;
+	}else{
+		echo "https://rank.pierdolnik.eu/storage/cache/img/maps/730/-.jpg";
+	}
+        ?>">
 
         <table class="table table-striped text-center">
             <tbody>
